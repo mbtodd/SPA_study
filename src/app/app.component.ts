@@ -118,11 +118,23 @@ const SPA_DATA: ISPAData[] = [
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // title = 'spa-study-ngmat';
 
   // tslint:disable-next-line: max-line-length
   displayedColumns: string[] = ['caseId', 'caseName', 'AssignedToDisplayName', 'WorkflowDisplayName', 'HighestWorkFlowHorizontalAttained', 'OpenedOn', 'caseCategoryName', 'WorkflowRouteName', 'DaysOpen', 'DaysAssigned', 'Score', 'FollowUpFlag', 'SystemNote' ];
   dataSource = SPA_DATA;
+
+    constructor(public dialog: MatDialog) { }
+
+  openDialog() {
+    this.dialog.open(DataElementDialog);
+  }
 }
 
 // Dialog logic
+
+
+@Component({
+  selector: 'app-data-dialog',
+  templateUrl: 'data-dialog.html',
+})
+export class DataElementDialog { }

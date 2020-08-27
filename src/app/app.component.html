@@ -5,7 +5,11 @@
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="caseId">
     <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.caseId}} </mat-cell>
+    <mat-cell *matCellDef="let element">
+
+      <button mat-button (click)="openDialog()">{{element.caseId}}</button>
+
+    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="caseName">
@@ -15,7 +19,9 @@
 
   <ng-container matColumnDef="AssignedToDisplayName">
     <mat-header-cell *matHeaderCellDef> Assigned To </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.AssignedToDisplayName}} </mat-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-button (click)="openDialog()">{{element.AssignedToDisplayName}}</button>
+    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="WorkflowDisplayName">
@@ -50,7 +56,9 @@
 
   <ng-container matColumnDef="DaysAssigned">
     <mat-header-cell *matHeaderCellDef> Days Assigned </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.DaysAssigned}} </mat-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="openDialog()">{{element.DaysAssigned}}</button>
+    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="Score">

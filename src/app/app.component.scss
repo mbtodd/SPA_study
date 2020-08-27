@@ -7,6 +7,13 @@ mat-cell {
   margin-right: 10px;
 }
 
+mat-header-cell {
+    font-weight: bold;
+    font-size: small;
+    display: inline-grid;
+    text-transform: uppercase;
+}
+
 .title_spa {
   margin: 25px;
   padding-top: 25px;
