@@ -1,26 +1,71 @@
+<div class="title_spa">
+  SPA DATA MODEL
+</div>
+
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+  <ng-container matColumnDef="caseId">
+    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.caseId}} </mat-cell>
   </ng-container>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  <ng-container matColumnDef="caseName">
+    <mat-header-cell *matHeaderCellDef> Case Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.caseName}} </mat-cell>
   </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+  <ng-container matColumnDef="AssignedToDisplayName">
+    <mat-header-cell *matHeaderCellDef> Assigned To </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.AssignedToDisplayName}} </mat-cell>
   </ng-container>
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+  <ng-container matColumnDef="WorkflowDisplayName">
+    <mat-header-cell *matHeaderCellDef> Workflow Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.WorkflowDisplayName}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="HighestWorkFlowHorizontalAttained">
+    <mat-header-cell *matHeaderCellDef> Highest Workflow </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.HighestWorkFlowHorizontalAttained}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="OpenedOn">
+    <mat-header-cell *matHeaderCellDef> Opened on Date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.OpenedOn}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="caseCategoryName">
+    <mat-header-cell *matHeaderCellDef> Case Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.caseCategoryName}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="WorkflowRouteName">
+    <mat-header-cell *matHeaderCellDef> Workflow Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.WorkflowRouteName}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="DaysOpen">
+    <mat-header-cell *matHeaderCellDef> Days Open </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.DaysOpen}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="DaysAssigned">
+    <mat-header-cell *matHeaderCellDef> Days Assigned </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.DaysAssigned}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Score">
+    <mat-header-cell *matHeaderCellDef> Score </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Score}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="FollowUpFlag">
+    <mat-header-cell *matHeaderCellDef> Follow up Flag </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.FollowUpFlag}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="SystemNote">
+    <mat-header-cell *matHeaderCellDef> System Note </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.SystemNote}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
